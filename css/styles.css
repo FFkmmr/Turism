@@ -1,0 +1,285 @@
+/* ------------------------------------------Обнуление-------------------------------------------------------- */
+* {margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    color: inherit;
+    background: transparent;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    vertical-align: baseline;}
+  h1, h2, h3, h4, h5, h6 { font-size: 1em;
+    font-weight: normal;}
+  a {color: inherit;}
+  /* -----------------------------------------Общие стили--------------------------------------------------------- */
+      body {
+      font-weight: 200;
+      font-size: 16px;
+      line-height: 1.8;
+      color: #6c757d;
+      background-color: #1f2029;
+    }
+  /* -----------------------------------------Основные стили шапки--------------------------------------------------------- */
+  .background-container {
+    position: relative;
+  }
+  .container-1 {
+    z-index: 1;
+  }
+  .background-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  } 
+  .background {
+    width: 100%;
+  }
+  .text-header, .text-header-l {
+    text-transform: capitalize;
+    position: absolute;
+    text-align: center;
+    display: block;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    max-width: 950px;
+    min-height: 130px;
+    top: 35%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    z-index: 2;        /*  */
+    letter-spacing: .2em;
+    font-size: 14px;
+    color: #fff;
+    line-height: 1;
+    font-weight: 500;
+    line-height: 1.6;
+  }
+  .text-header h1 {
+    font-weight: bold;
+    font-size: 75px;
+  }
+  .text-header-l {
+    position: fixed;
+    font-weight: bold;
+    top: 11%;
+    left: 13%;
+  }
+  .logo-name {
+    font-size: 30px;
+    top: 0px;
+    left: 0px;
+    z-index: 6;
+  }
+.best-hotel {
+  position: fixed;
+  top: 11%;
+  left: 11%;
+  transform: translateY(0);
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  z-index: 101;
+  transition: top 0.5s ease-in-out, transform 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+.best-hotel.black {
+  color: #000;
+  transform: translateY(15%);
+}
+.welcome-text, .header-text {
+  opacity: 0;
+  transform: translateY(105px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.animate-welcome {
+  opacity: 1; 
+  transform: translateY(0); 
+}
+/* ----------------------------------------- Анимация --------------------------------------------------------- */
+.text-anim {
+  opacity: 0;
+    transform: translateY(90px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+/* -----------------------------------------Белая линия--------------------------------------------------------- */
+.white-line {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 85px;
+  background-color: white;
+  opacity: 0; 
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 100; 
+  transition: opacity 0.5s ease-in-out;
+}
+.menusca {
+  position: absolute;
+  z-index: 101;
+}
+/* -----------------------------------------Основные стили body-1--------------------------------------------------------- */
+.main-1 {
+  width: 1855px;
+  height: 800px;
+  background-color: #f2f4fb;
+  padding: 48px 0px;
+  position: relative;
+  margin-top: -300px;
+  z-index: 3;
+}
+
+.body-container {
+  margin-top: 100px;
+  position: absolute;
+  transition: margin-top 0.3s ease-in-out;
+}
+
+.body-container.overlap {
+  margin-top: -85px;
+}
+.container-2 {
+  width: 100%; 
+  max-width: 1140px; 
+  height: 100%;
+  background-color: #f2f4fb;
+  margin: 0 auto; 
+  padding: 0px 15px; 
+  display: block;
+  z-index: 2;
+}
+.container-2 h2 {
+  color: #000000;
+  font-weight: 700;
+  font-size: 60px;
+}
+.text-1 {
+  margin: 0;
+  float: left;
+  max-height: 400px;
+  width: 330px;
+  margin-top: 140px;
+}
+.text-1 p {
+  font-family: "Roboto", arial, sans-serif;
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #6c757d;
+  margin-bottom: 24px;
+}
+.btn.btn-primary.text-white.py-2.mr-3 {
+  font-family: "Roboto", arial, sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  background-color: #ffba5a;
+  border-color: #ffba5a;
+  margin-right: 1rem!important;
+  padding-top: 0.5rem!important;
+  padding-bottom: 0.5rem!important;
+  color: #fff!important;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 50px;
+  outline: none;
+  box-shadow: none !important;
+  cursor: pointer;
+}
+.btn.btn-primary.text-white.py-2.mr-3:hover {
+  background-color: #fcac35;
+  border-color: #ffad32;
+}
+a[data-fancybox].text-uppercase.letter-spacing-1 {
+  font-family: "Roboto", arial, sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffba5a;
+}
+a[data-fancybox].text-uppercase.letter-spacing-1:hover {
+  font-weight: 500;
+  color: #ffa930;
+}
+em.mr-3.font-family-serif {
+  font-family: "Roboto", arial, sans-serif;
+  margin-top: 5px;
+}
+/* -----------------------------------------Картинки-1--------------------------------------------------------- */
+.images-1 {
+  float: right;
+  min-height: 400px;
+  margin-top: 70px;
+}
+.circle {
+  position: absolute;
+  top: 390px;
+  left: 1340px;
+  width: 270px; /* Диаметр круга (радиус умножен на 2) */
+  height: 270px; /* Диаметр круга (радиус умножен на 2) */
+  border-radius: 50%; /* Создаем круг с радиусом 20px */
+  background-color: rgb(255, 255, 255); /* Цвет фона круга (серый) */
+  border: 2px solid rgb(255, 255, 255); /* Окантовка круга серым цветом */
+  overflow: hidden; /* Обрезаем содержимое, чтобы оно не выходило за границы круга */
+  display: inline-flex; /* Используем flex для центрирования изображения */
+  justify-content: center;
+  align-items: center;
+}
+.circle::before {
+  content: ""; /* Создаем псевдоэлемент для отрисовки круга */
+  position: absolute; /* Позиционируем псевдоэлемент абсолютно относительно .circle */
+  top: 0;
+  left: 0;
+  width: 100%; /* Задаем ширину и высоту 100% для псевдоэлемента */
+  height: 100%;
+  border-radius: 50%; /* Задаем радиус 50%, чтобы получить круг */
+  z-index: -1; /* Устанавливаем z-индекс псевдоэлемента ниже основного контента */
+  background-color: rgb(255, 255, 255); /* Цвет круга (серый) */
+  transform: rotate(45deg); /* Поворачиваем псевдоэлемент на 45 градусов */
+}
+.circle img {
+  width: 95%; /* Задайте размеры изображения по вашему усмотрению */
+  height: 95%;
+  object-fit: cover; /* Подгон фото внутри круга, сохраняя пропорции */
+  border-radius: 50%; /* Для обрезания изображения в форму круга */
+  z-index: 1; /* Чтобы изображение находилось поверх псевдоэлемента */
+}
+/* -----------------------------------------Основные стили body-2--------------------------------------------------------- */
+.main-2 {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  height: 500px;
+  max-height: 600px;
+  top: 915px;
+
+  font-family: "Roboto", arial, sans-serif;
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 1.8;
+  box-sizing: border-box;
+  padding: 7em 0;
+}
+
+
