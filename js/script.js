@@ -26,7 +26,7 @@ function updateTextAnimVisibility() {
     const elementOffset = element.offsetTop;
     const isVisible = scrollFromBottom >= (elementOffset + triggerOffset) && scrollFromTop <= elementOffset;
     element.style.opacity = isVisible ? '0' : '1';
-    element.style.transform = isVisible ? 'translateY(0)' : 'translateY(20px)';
+    element.style.transform = isVisible ? 'translateY(20)' : 'translateY(0px)';
   });
 }
 
@@ -64,3 +64,23 @@ function updateBodyPosition() {
 }
 window.addEventListener('scroll', updateBodyPosition);
 /* -----------------------------------------    --------------------------------------------------------- */
+const scrollAnimElements = document.querySelectorAll('.scroll-anim');
+
+function updateScrollAnimVisibility() {
+  const triggerOffset = 230;
+  const scrollFromTop = window.scrollY;
+  const windowHeight = window.innerHeight;
+
+  scrollAnimElements.forEach(element => {
+    const elementOffset = element.offsetTop;
+    const isVisible = scrollFromTop >= (elementOffset - windowHeight + triggerOffset) && scrollFromTop <= (elementOffset + triggerOffset);
+
+    element.style.opacity = isVisible ? '0' : '1';
+    element.style.transform = isVisible ? 'translateY(60)' : 'translateY(0px)';
+  });
+}
+
+window.addEventListener('scroll', updateScrollAnimVisibility);
+
+// Проверим видимость элементов при загрузке страницы
+document.addEventListener('DOMContentLoaded', updateScrollAnimVisibility);
