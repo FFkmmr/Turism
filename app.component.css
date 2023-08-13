@@ -227,6 +227,9 @@ box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px
   transform: translateY(105px);
   transition: opacity 1s ease, transform 1s ease;
 }
+.welcome-text {
+  height: 60px;
+}
 .animate-welcome {
   opacity: 1; 
   transform: translateY(0); 
@@ -269,7 +272,7 @@ box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px
 }
 /* -----------------------------------------Основные стили body-1--------------------------------------------------------- */
 .main-1 {
-  width: 1855px;
+  width: 100%;
   height: 700px;
   background-color: #f2f4fb;
   padding: 48px 0px;
@@ -307,15 +310,28 @@ box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px
   float: left;
   max-height: 400px;
   width: 330px;
-  margin-top: 140px;
+  margin-top: 60px;
 }
 .text-1 p {
   font-family: "Roboto", arial, sans-serif;
-  font-weight: 200;
-  font-size: 16px;
-  line-height: 1.8;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5;
   color: #6c757d;
   margin-bottom: 24px;
+}
+.text-1 h2 {
+  font-size: 75px;
+}
+.left-b2 {
+  height: 550px;
+  display: block;
+  float: left;
+}
+.right-b2 {
+  height: 550px;
+  display: block;
+  float: right;
 }
 .btn.btn-primary.text-white.py-2.mr-3 {
   font-family: "Roboto", arial, sans-serif;
